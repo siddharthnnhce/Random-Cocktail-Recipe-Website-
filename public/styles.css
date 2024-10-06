@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background: linear-gradient(to right, #ffecd2, #fcb69f); /* Attractive background */
+    color: #333;
+    text-align: center;
+    padding: 40px;
+    margin: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+  }
+  
+  h1 {
+    color: #ff6347;
+    font-size: 3rem;
+    animation: slideDown 1s ease-out; /* Slide-in effect */
+  }
+  
+  .cocktail img {
+    border-radius: 12px;
+    margin-bottom: 20px;
+    width: 300px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth hover effect */
+  }
+  
+  .cocktail img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 5px 0;
+    font-size: 1.2rem;
+  }
+  
+  /* Button Styling */
+  .btn {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add smooth transition */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Add some shadow */
+  }
+  
+  .btn:hover {
+    background-color: #ff4500;
+    transform: scale(1.1); /* Slight grow on hover */
+  }
+  
+  .btn:active {
+    background-color: #e63e00;
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Cocktail</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Random Cocktail Recipe</h1>
+
+    <!-- Cocktail display container -->
+    <div id="cocktail-container">
+      <div class="cocktail">
+        <h2 id="cocktail-name"><%= cocktail.strDrink %></h2>
+        <img id="cocktail-img" src="<%= cocktail.strDrinkThumb %>" alt="Cocktail Image" width="300px">
+        <p><strong>Category:</strong> <span id="cocktail-category"><%= cocktail.strCategory %></span></p>
+        <p><strong>Glass Type:</strong> <span id="cocktail-glass"><%= cocktail.strGlass %></span></p>
+        <p><strong>Instructions:</strong> <span id="cocktail-instructions"><%= cocktail.strInstructions %></span></p>
+
+        <h3>Ingredients:</h3>
+        <ul id="cocktail-ingredients">
+          <% for (let i = 1; i <= 15; i++) { %>
+            <% if (cocktail[`strIngredient${i}`]) { %>
+              <li><%= cocktail[`strIngredient${i}`] %> - <%= cocktail[`strMeasure${i}`] || '' %></li>
+            <% } %>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Button to fetch a new cocktail -->
+    <button id="new-cocktail-btn" class="btn">Get a New Cocktail</button>
+  </div>
+
+  <!-- Add a script to handle AJAX request -->
+  <script src="/script.js"></script>
+</body>
+</html>
